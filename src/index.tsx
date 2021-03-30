@@ -1,4 +1,5 @@
 import "./index.scss";
+import "bootstrap";
 
 import MobileOnly from "./components/MobileOnly/MobileOnly";
 import React from "react";
