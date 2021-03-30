@@ -1,0 +1,19 @@
+// Bootstrap 5
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Boxicons
+@import "../node_modules/boxicons/css/boxicons.css";
+.bx {
+	&:before {
+		position: relative;
+		top: 1px;
+	}
+}
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+body {
+	font-family: "Lexend";
+}
+
+// Root stying
