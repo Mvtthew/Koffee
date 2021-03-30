@@ -1,0 +1,25 @@
+.top-navigation {
+	width: calc(100% - 1.5rem);
+	min-height: 68px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0.75rem;
+	left: 0.75rem;
+	border-radius: 1rem;
+	background-color: white;
+	padding: 0;
+	.container-fluid {
+		margin: 0.6rem 0;
+	}
+
+	.navbar-toggler {
+		border-radius: 50rem;
+		width: 48px;
+		height: 48px;
+		padding: 0.7rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

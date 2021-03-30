@@ -1,5 +1,14 @@
 // Bootstrap 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+.shadow {
+	box-shadow: 0 0 1rem rgb(0 0 0 / 15%) !important ;
+	&-sm {
+		box-shadow: 0 0 0.25rem rgb(0 0 0 / 8%) !important;
+	}
+	&-lg {
+		box-shadow: 0 0 3rem rgb(0 0 0 / 18%) !important;
+	}
+}
 
 // Boxicons
 @import "../node_modules/boxicons/css/boxicons.css";
@@ -11,12 +20,35 @@
 }
 
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 body {
-	font-family: "Lexend";
+	font-family: "Questrial";
 }
 
 // Root stying
 main {
-	margin-top: calc(56px + 0.75rem);
+	margin: calc(68px + 2rem) 0.75rem;
+	min-height: calc(100vh - 136px - 4rem);
+}
+
+.h-full {
+	height: calc(100vh - 136px - 4rem);
+}
+
+.btn-icon {
+	width: 40px;
+	height: 40px;
+	font-size: 1.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-width: 2px;
+	padding: 0;
+	&-lg {
+		width: 48px;
+		height: 48px;
+		font-size: 1.8rem;
+		border-width: 2px;
+	}
 }

@@ -1,18 +1,20 @@
 import { BrowserRouter, Route } from "react-router-dom";
 
-import Navigation from "../components/Navigation/Navigation";
+import BottomNavigation from "../components/BottomNavigation/BottomNavigation";
 import React from "react";
+import TopNavigation from "../components/TopNavigation/TopNavigation";
 import { routes } from "./routes";
 
 const Router: React.FC = () => {
 	return (
 		<BrowserRouter>
-			<Navigation />
-			<main className="container-fluid">
+			<TopNavigation />
+			<main>
 				{routes.map((r, index) => (
 					<Route key={`r_${index}_${r.path}`} path={r.path} exact={r.exact} component={r.component} />
 				))}
 			</main>
+			<BottomNavigation />
 		</BrowserRouter>
 	);
 };

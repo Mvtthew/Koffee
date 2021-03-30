@@ -1,12 +1,12 @@
-import "./Navigation.scss";
+import "./TopNavigation.scss";
 
 import { Link } from "react-router-dom";
 import React from "react";
 
-const Navigation: React.FC = () => {
+const TopNavigation: React.FC = () => {
 	return (
-		<nav className="navigation navbar fixed-top navbar-expand-lg navbar-light bg-light">
-			<div className="container-fluid">
+		<nav className="top-navigation navbar fixed-top navbar-expand-lg navbar-light shadow-lg">
+			<div className="container-fluid px-3">
 				<Link className="navbar-brand" to="/">
 					<i className="bx bx-coffee me-1"></i>
 					Koffee
@@ -22,8 +22,8 @@ const Navigation: React.FC = () => {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNav">
-					<ul className="navbar-nav">
-						<li className="nav-item">
+					<ul className="navbar-nav mt-3">
+						<li className="nav-item text-center">
 							<Link className="nav-link active" to="/">
 								Home
 							</Link>
@@ -35,4 +35,4 @@ const Navigation: React.FC = () => {
 	);
 };
 
-export default Navigation;
+export default TopNavigation;
