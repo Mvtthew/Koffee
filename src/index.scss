@@ -9,6 +9,13 @@
 		box-shadow: 0 0 3rem rgb(0 0 0 / 18%) !important;
 	}
 }
+.card {
+	border-radius: 1rem;
+	&-header {
+		border-radius: 1rem 1rem 0 0 !important;
+		background-color: white;
+	}
+}
 
 // Boxicons
 @import "../node_modules/boxicons/css/boxicons.css";
