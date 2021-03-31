@@ -3,7 +3,7 @@ import React from "react";
 const Home: React.FC = () => {
 	return (
 		<>
-			<div className="home h-full d-flex align-items-center justify-content-center">
+			<div className="home">
 				<div className="card shadow-lg w-100">
 					<div className="card-header">
 						<h2 className="mb-0">Hello</h2>
