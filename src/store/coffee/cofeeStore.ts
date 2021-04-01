@@ -1,9 +1,10 @@
+import Coffee from "../../models/Coffee";
+
 type ADD_COFFEE = "ADD_COFFEE";
-type REMOVE_COFFEE = "REMOVE_COFFEE";
-type CoffeeActionTypes = ADD_COFFEE | REMOVE_COFFEE;
+type CoffeeActionTypes = ADD_COFFEE;
 
 export interface CoffeeState {
-	coffeeAmount: number;
+	drinked: Coffee[];
 }
 
 export const addCoffee = {
@@ -11,7 +12,7 @@ export const addCoffee = {
 };
 
 const initialState: CoffeeState = {
-	coffeeAmount: 0,
+	drinked: [],
 };
 
 const coffeeReducer = (
@@ -22,9 +23,7 @@ const coffeeReducer = (
 ): CoffeeState => {
 	switch (action.type) {
 		case "ADD_COFFEE":
-			return { coffeeAmount: state.coffeeAmount + 1 };
-		case "REMOVE_COFFEE":
-			return { coffeeAmount: state.coffeeAmount - 1 };
+			return { drinked: [...state.drinked, new Coffee()] };
 		default:
 			return state;
 	}

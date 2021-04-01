@@ -1,28 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 
+import Coffee from "../../models/Coffee";
 import React from "react";
 import { RootState } from "../../store";
-import { addCoffee } from "../../store/coffee/cofeeStore";
 
 const Home: React.FC = () => {
-	const dispatch = useDispatch();
-	const coffeeAmount = useSelector<RootState, number>((state) => state.coffeeReducer.coffeeAmount);
+	const drinked = useSelector<RootState, Coffee[]>((state) => state.coffeeReducer.drinked);
 
 	return (
 		<>
 			<div className="home">
 				<div className="card shadow-lg w-100">
 					<div className="card-header">
-						<h2 className="mb-0">Coffe drined</h2>
+						<h5 className="mb-0">Today</h5>
 					</div>
 					<div className="card-body">
-						{coffeeAmount}
-						<button
-							onClick={() => {
-								dispatch(addCoffee);
-							}}>
-							++
-						</button>
+						<p className="display-4 mb-0">
+							<i className="bx bx-coffee me-2"></i>
+							{drinked.length}
+						</p>
 					</div>
 				</div>
 			</div>
