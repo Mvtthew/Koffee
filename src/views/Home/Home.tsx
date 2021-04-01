@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-
 import Coffee from "../../models/Coffee";
 import React from "react";
 import { RootState } from "../../store";
+import { useSelector } from "react-redux";
 
 const Home: React.FC = () => {
 	const drinked = useSelector<RootState, Coffee[]>((state) => state.coffeeReducer.drinked);
